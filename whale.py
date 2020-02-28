@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import os
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neighbors import KNeighborsClassifier 
 
 #Gathering training data from data directory
 train_list = os.listdir('data')
@@ -29,6 +29,9 @@ master_test1 = np.reshape(master_test,(len(master_test),-1))
 learner = KNeighborsClassifier(2, weights='distance')
 learner.fit(master_train_1,train_labels)
 prediction = learner.predict(master_test1)
+
+#Printing predictions
+print(prediction)
 
 #Finding the accuracy
 count = 0
