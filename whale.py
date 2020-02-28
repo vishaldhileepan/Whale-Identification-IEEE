@@ -30,9 +30,6 @@ learner = KNeighborsClassifier(2, weights='distance')
 learner.fit(master_train_1,train_labels)
 prediction = learner.predict(master_test1)
 
-#Printing predictions
-print(prediction)
-
 #Finding the accuracy
 count = 0
 for i in range(len(test_labels)):
